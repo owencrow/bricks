@@ -37,4 +37,4 @@ spec:
   selector:
     app: bricks
   sessionAffinity: None
-  type: ClusterIP
+  type: LoadBalancer

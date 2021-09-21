@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bricks-deployment
+  labels:
+    app: bricks
+spec:
+  selector:
+    matchLabels:
+      app: bricks
+  template:
+    metadata:
+      labels:
+        app: bricks
+    spec:
+      containers:
+      - name: bricks
+        image: bricks:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
